@@ -1,4 +1,5 @@
 baseURL = 'https://fabienducret.github.io'
 languageCode = 'en-us'
 title = 'Clean blog'
-theme = 'beautifulhugo'
+theme = 'hugo-ficurinia'
+publishDir = 'docs'
