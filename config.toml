@@ -3,3 +3,7 @@ languageCode = 'en-us'
 title = 'Clean blog'
 theme = 'paper'
 publishDir = 'docs'
+
+[params]
+  # color style
+  color = 'linen'
