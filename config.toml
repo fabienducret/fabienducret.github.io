@@ -1,9 +1,5 @@
 baseURL = 'https://fabienducret.github.io'
 languageCode = 'en-us'
 title = 'Clean blog'
-theme = 'paper'
+theme = 'beautifulhugo'
 publishDir = 'docs'
-
-[params]
-  # color style
-  color = 'wheat'
