@@ -6,4 +6,4 @@ publishDir = 'docs'
 
 [params]
   # color style
-  color = 'linen'
+  color = 'wheat'
