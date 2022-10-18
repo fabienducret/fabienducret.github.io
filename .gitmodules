@@ -7,3 +7,9 @@
 [submodule "themes/paper"]
 	path = themes/paper
 	url = https://github.com/nanxiaobei/hugo-paper
+[submodule "themes/etch"]
+	path = themes/etch
+	url = https://github.com/LukasJoswiak/etch.git
+[submodule "themes/holy"]
+	path = themes/holy
+	url = https://github.com/serkodev/holy.git
