@@ -1,0 +1,9 @@
+[submodule "themes/beautifulhugo"]
+	path = themes/beautifulhugo
+	url = https://github.com/halogenica/beautifulhugo.git
+[submodule "themes/themes/paper"]
+	path = themes/themes/paper
+	url = https://github.com/nanxiaobei/hugo-paper
+[submodule "themes/paper"]
+	path = themes/paper
+	url = https://github.com/nanxiaobei/hugo-paper
