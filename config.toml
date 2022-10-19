@@ -11,7 +11,6 @@ defaultContentLanguage = 'fr'
 [params]
   github = "fabienducret"
   monoDarkIcon = true
-  disableHLJS = true
-  #name = "Bienvenue"
-  #bio = "Blog d'un passionné pour les passionnés"
+  name = "Bienvenue sur mon blog tech"
+  bio = "Ces articles sont écrits par un passionné pour des passionnés."
   #avatar = "https://deno.land/logo.svg"

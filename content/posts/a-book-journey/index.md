@@ -58,11 +58,17 @@ En lisant ce livre je me suis rendu compte qu'un univers s'ouvrait à moi.
 
 Ma manière d'appréhender l'écriture du code a été complètement remise en question : **le fond et la forme sont aussi importants.**
 
-> Développer c'est l'art de faire comprendre à un humain ce qu'on veut que l'ordinateur exécute.
+> It is not enough for code to work.
 
-Ce livre explique un tas de concepts aidant à développer du clean code.
+> Truth can only be found in one place: the code.
+
+Ce livre explique un tas de concepts aidant à produire du clean code.
+
+**Un must read**
 
 ### The Pragmatic Programmer - A. Hunt et D. Thomas
+
+Continuons ce voyage en parlant d'un deuxième livre marquant :
 
 ### The Software Craftmanship - S. Mancuso
 
