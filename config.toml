@@ -2,6 +2,8 @@ baseURL = 'https://fabienducret.github.io'
 languageCode = 'en-us'
 title = 'Clean blog'
 subtitle = 'subtitle'
-theme = 'mini'
+theme = 'paper'
 publishDir = 'docs'
 defaultContentLanguage = 'fr'
+
+disqusShortname = "clean-blog-4"
