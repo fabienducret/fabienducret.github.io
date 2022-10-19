@@ -7,3 +7,11 @@ publishDir = 'docs'
 defaultContentLanguage = 'fr'
 
 #disqusSortname = "clean-blog-4"
+
+[params]
+  github = "fabienducret"
+  monoDarkIcon = true
+  disableHLJS = true
+  #name = "Bienvenue"
+  #bio = "Blog d'un passionné pour les passionnés"
+  #avatar = "https://deno.land/logo.svg"
