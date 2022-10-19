@@ -6,4 +6,4 @@ theme = 'paper'
 publishDir = 'docs'
 defaultContentLanguage = 'fr'
 
-disqusShortname = "clean-blog-4"
+#disqusSortname = "clean-blog-4"
