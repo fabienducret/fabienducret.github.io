@@ -6,7 +6,7 @@ draft: false
 
 Quand on est passionné par un sujet, on a toujours envie d'apprendre.
 
-Bien que les livres soient une source de connaissance énorme, certains peuvent devenir rapidement obsolète (framework, techno plus d'actualité).
+Bien que les livres soient une source de connaissance énorme, certains peuvent devenir rapidement obsolètes (framework, techno plus d'actualité, etc).
 
 Comment s'y retrouver au milieu de cette bibliothèque ?
 
