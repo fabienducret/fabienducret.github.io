@@ -104,4 +104,46 @@ Je l'ai très vite trouvé difficile à lire, presque imbuvable. Les exemples en
 
 Je me suis vite tourné vers ce livre qui est son opposé.
 
-Les exemples sont nombreux et bien amenés. On comprend facilement les concepts, le livre étant facile à lire.
+**Les exemples sont nombreux et bien amenés.** On comprend facilement les concepts, le livre étant facile à lire.
+
+> We’d like to keep things flexible - E. Freeman
+
+### The Sofwtare Craftsman - S. Mancuso
+
+![The Sofwtare Craftsman](images/sofwtare_craftsman.jpeg)
+
+J'adhère complétement à l'avis de l'auteur sur la posture que doit avoir un professionnel du développement.
+
+Si je devais ressortir un mot de ce livre, **c'est la passion**.
+
+Grâce à elle on est constamment en train de s'améliorer.
+
+Grâce à elle on est fier de délivrer du code de qualité.
+
+> Above all, software craftsmen are professionals who care about and respect their customers. S. Mancuso
+
+> It is easy to say that a piece of code is badly written. It is easy to complain or even laugh. But the question is: are you good enough to make it better? S. Mancuso
+
+### C'est tout ?
+
+Non le voyage ne fait que commencer !
+
+J'ai indiqué les 4 livres que j'ai trouvé indispensables mais il y en a tellement à lire !
+
+Voici la liste des livres que je recommande :
+
+- **Software Craft** : les livres français sont rares ! Celui là est très bien écrit et reprend tous les concepts du craft.
+
+- **Working Effectively with Legacy Code** : c'est jamais fun de bosser avec du code legacy. Mais ce livre présente les manières de s'en sortir sans tout casser.
+
+- **Test Driven Development by example** : LE livre par lequel cette pratique a débuté. A lire pour comprendre sa puissance.
+
+- **Refactoring Improving the Design of Existing Code** : une bible contenant toutes les techniques pour refactorer sans risque.
+
+### Et les livres techniques dans tout ça ?
+
+Vous l'aurez surement remarqué, je n'ai pas indiqué de livre technique dans cette liste.
+
+Ce n'est pas un oubli de ma part !
+
+Du fait de leur obsolescence, ces livres sont rarement ceux que je retiens.
