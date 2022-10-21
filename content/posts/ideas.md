@@ -7,3 +7,4 @@ draft: true
 - livres préférés
 - peut on être pro en esn ?
 - quels sont les moyens de progresser
+- injection de dépendances
