@@ -6,9 +6,9 @@ draft: false
 
 Quand on est passionné par un sujet, on a toujours envie d'apprendre.
 
-Bien que les livres soient une source de connaissance impressionnante, certains peuvent devenir rapidement obsolètes (framework ou techno plus d'actualité, etc). D'autres peuvent être difficiles à lire ou comprendre.
+Bien que les livres soient une source de connaissance impressionnante, certains peuvent devenir rapidement obsolètes (framework ou techno dépassé par exemple). D'autres peuvent être difficiles à lire ou comprendre.
 
-Comment s'y retrouver au milieu de toute cette littérature ?
+Comment s'y retrouver au milieu de cet océan ?
 
 **Voici l'histoire de mon voyage littéraire.**
 
@@ -46,7 +46,7 @@ Cette catégorie regroupe les livres qui parlent d'agilité ou de software craft
 
 Il existe des livres qui changent votre manière de voir les choses, d'autres qui confirment vos convictions.
 
-La liste que je propose regroupe les livres qui ont défini ma méthodologie et mon attitude en tant que développeur.
+La liste ci-dessous regroupe les livres qui ont défini ma manière d'être et de faire en tant que développeur.
 
 ### Clean Code - R. Martin
 
@@ -56,13 +56,15 @@ La liste que je propose regroupe les livres qui ont défini ma méthodologie et 
 
 En lisant ce livre je me suis rendu compte qu'un univers s'ouvrait à moi.
 
-Ma manière d'appréhender l'écriture du code a été complètement remise en question : **le fond et la forme sont aussi importants.**
+Ma manière d'appréhender l'écriture du code a été complètement remise en question. **Le fond et la forme sont aussi importants.**
 
 > It is not enough for code to work. - R. Martin
 
 > Truth can only be found in one place: the code. - R. Martin
 
-Ce livre explique un tas de concepts aidant à produire du clean code.
+Ce livre explique tous les concepts qui définissent le clean code.
+
+C'est une très belle introduction dans ce monde qui parait simple mais qui est si complexe à maitriser.
 
 ### The Pragmatic Programmer - A. Hunt et D. Thomas
 
@@ -70,13 +72,13 @@ Ce livre explique un tas de concepts aidant à produire du clean code.
 
 ![The pragmatic Programmer](images/prag_prog.jpg)
 
-Comme je le disais plus haut, il y a des livres qui confirment vos convictions. L'univers ouvert grâce à la lecture de Clean Code s'est confirmé avec ce livre.
+Comme je le disais plus haut, il y a des livres qui confirment vos convictions. L'univers ouvert grâce à la lecture de Clean Code s'est confirmé grâce ce livre.
 
 Bien qu'il ait 20 ans, ses concepts sont toujours d'actualité.
 
 On y parle entre autre de :
 
-- DRY
+- DRY (don't repeat yourself)
 - Broken window
 - Découplage
 - Naming
@@ -90,7 +92,7 @@ Les sujets couverts sont larges et très pertinants.
 
 > Names are deeply meaningful to your brain, and misleading names add chaos to your code. - A. Hunt
 
-**LE livre indispensable.**
+**LE livre indispensable pour tout développeur.**
 
 ### Head First Design Patterns - E. Robson & E. Freeman
 
@@ -98,15 +100,17 @@ Si les deux précédents livres faisaient partis de la catégorie des livres com
 
 ![Design Patterns](images/design_patterns.jpg)
 
-Quand j'ai voulu apprendre les design patterns existants, j'ai commencé par acheter le livre du Gang of Four.
+Quand j'ai voulu apprendre les design patterns existants, j'ai commencé par le maître en la matière : le livre du Gang of Four.
 
 Je l'ai très vite trouvé difficile à lire, presque imbuvable. Les exemples en c++ n'étaient pas nombreux et difficiles à comprendre.
 
-Je me suis vite tourné vers ce livre qui est son opposé.
+Je me suis rapidement tourné vers ce livre qui est son parfait opposé.
 
-**Les exemples sont nombreux et bien amenés.** On comprend facilement les concepts, le livre étant facile à lire.
+**Les exemples sont nombreux et bien amenés.** Le livre étant facile à lire, on comprend facilement les concepts.
 
 > We’d like to keep things flexible - E. Freeman
+
+La flexibilité est la clé d'un logiciel qui peut évoluer sans devenir difficile à maintenir.
 
 ### The Sofwtare Craftsman - S. Mancuso
 
@@ -116,9 +120,9 @@ J'adhère complétement à l'avis de l'auteur sur la posture que doit avoir un p
 
 Si je devais ressortir un mot de ce livre, **c'est la passion**.
 
-Grâce à elle on est constamment en train de s'améliorer.
+Grâce à elle, on est constamment en train de s'améliorer.
 
-Grâce à elle on est fier de délivrer du code de qualité.
+Grâce à elle, on est fier de délivrer du code de qualité.
 
 > Above all, software craftsmen are professionals who care about and respect their customers. S. Mancuso
 
@@ -132,13 +136,13 @@ J'ai indiqué les 4 livres que j'ai trouvé indispensables mais il y en a tellem
 
 Voici la liste des livres que je recommande :
 
-- **Software Craft** : les livres français sont rares ! Celui là est très bien écrit et reprend tous les concepts du craft.
+- **Software Craft** : les livres français sont rares ! Celui là est très bien écrit et reprend tous les concepts du craft en les expliquant parfaitement.
 
-- **Working Effectively with Legacy Code** : c'est jamais fun de bosser avec du code legacy. Mais ce livre présente les manières de s'en sortir sans tout casser.
+- **Working Effectively with Legacy Code** : c'est jamais fun de travailler avec du code legacy. Ce livre présente les manières de s'en sortir sans tout casser.
 
 - **Test Driven Development by example** : LE livre par lequel cette pratique a débuté. A lire pour comprendre sa puissance.
 
-- **Refactoring Improving the Design of Existing Code** : une bible contenant toutes les techniques pour refactorer sans risque.
+- **Refactoring Improving the Design of Existing Code** : la bible contenant toutes les techniques pour refactorer sans risque.
 
 ### Et les livres techniques dans tout ça ?
 
