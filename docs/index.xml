@@ -6,7 +6,20 @@
     <description>Recent content on Clean blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Jan 2023 17:49:53 +0100</lastBuildDate><atom:link href="https://fabienducret.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Jan 2023 14:23:14 +0100</lastBuildDate><atom:link href="https://fabienducret.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>L&#39;inversion de dépendance</title>
+      <link>https://fabienducret.github.io/posts/dependency-inversion/</link>
+      <pubDate>Sun, 22 Jan 2023 14:23:14 +0100</pubDate>
+      
+      <guid>https://fabienducret.github.io/posts/dependency-inversion/</guid>
+      <description>L&amp;rsquo;inversion des dépendances est un des principes clé de programmation. C&amp;rsquo;est le fameux D de l&amp;rsquo;acronyme SOLID.
+Mais en quoi consiste ce principe et pourquoi est-il si utile ?
+Le couplage, fléau de la maintenabilité et de la testabilité Lorsque plusieurs modules sont fortement couplés, la maintenabilité ainsi que la testabilité deviennent plus difficiles.
+Prenons un exemple concret avec la récupération d&amp;rsquo;élements depuis une base de données :
+import { MySQLConnection } from &amp;#39;.</description>
+    </item>
+    
     <item>
       <title>Le pattern Decorator pour gérer la complexité accidentelle</title>
       <link>https://fabienducret.github.io/posts/pattern-decorator/</link>

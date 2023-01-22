@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready text-sm lg:text-base"
+  style="--bg: #faf6f1"
+  lang="en-us"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  
+  <title>L&#39;inversion de dépendance - Clean blog</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="L&rsquo;inversion des dépendances est un des principes clé de programmation. C&rsquo;est le fameux D de l&rsquo;acronyme SOLID.
+Mais en quoi consiste ce principe et pourquoi est-il si utile ?
+Le couplage, fléau de la maintenabilité et de la testabilité Lorsque plusieurs modules sont fortement couplés, la maintenabilité ainsi que la testabilité deviennent plus difficiles.
+Prenons un exemple concret avec la récupération d&rsquo;élements depuis une base de données :
+import { MySQLConnection } from &#39;." />
+  <meta name="author" content="" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://fabienducret.github.io/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://fabienducret.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+    
+  
+  <link
+    rel="preload"
+    as="image"
+    href="https://fabienducret.github.io/theme.png"
+  />
+
+  
+  
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://fabienducret.github.io/github.svg" />
+  
+
+  
+  <link rel="icon" href="https://fabienducret.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://fabienducret.github.io/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.104.3" />
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="L&#39;inversion de dépendance" />
+<meta property="og:description" content="L&rsquo;inversion des dépendances est un des principes clé de programmation. C&rsquo;est le fameux D de l&rsquo;acronyme SOLID.
+Mais en quoi consiste ce principe et pourquoi est-il si utile ?
+Le couplage, fléau de la maintenabilité et de la testabilité Lorsque plusieurs modules sont fortement couplés, la maintenabilité ainsi que la testabilité deviennent plus difficiles.
+Prenons un exemple concret avec la récupération d&rsquo;élements depuis une base de données :
+import { MySQLConnection } from &#39;." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fabienducret.github.io/posts/dependency-inversion/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-22T14:23:14+01:00" />
+<meta property="article:modified_time" content="2023-01-22T14:23:14+01:00" />
+
+
+  
+  <meta itemprop="name" content="L&#39;inversion de dépendance">
+<meta itemprop="description" content="L&rsquo;inversion des dépendances est un des principes clé de programmation. C&rsquo;est le fameux D de l&rsquo;acronyme SOLID.
+Mais en quoi consiste ce principe et pourquoi est-il si utile ?
+Le couplage, fléau de la maintenabilité et de la testabilité Lorsque plusieurs modules sont fortement couplés, la maintenabilité ainsi que la testabilité deviennent plus difficiles.
+Prenons un exemple concret avec la récupération d&rsquo;élements depuis une base de données :
+import { MySQLConnection } from &#39;."><meta itemprop="datePublished" content="2023-01-22T14:23:14+01:00" />
+<meta itemprop="dateModified" content="2023-01-22T14:23:14+01:00" />
+<meta itemprop="wordCount" content="409">
+<meta itemprop="keywords" content="" />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="L&#39;inversion de dépendance"/>
+<meta name="twitter:description" content="L&rsquo;inversion des dépendances est un des principes clé de programmation. C&rsquo;est le fameux D de l&rsquo;acronyme SOLID.
+Mais en quoi consiste ce principe et pourquoi est-il si utile ?
+Le couplage, fléau de la maintenabilité et de la testabilité Lorsque plusieurs modules sont fortement couplés, la maintenabilité ainsi que la testabilité deviennent plus difficiles.
+Prenons un exemple concret avec la récupération d&rsquo;élements depuis une base de données :
+import { MySQLConnection } from &#39;."/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold" href="https://fabienducret.github.io"
+      >Clean blog</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkVal = localStorage.getItem('dark');
+    setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/fabienducret "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">L&#39;inversion de dépendance</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>22 janv. 2023</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>L&rsquo;inversion des dépendances est un des principes clé de programmation. C&rsquo;est le fameux <strong>D</strong> de l&rsquo;acronyme <strong>SOLID</strong>.</p>
+<p>Mais en quoi consiste ce principe et pourquoi est-il si utile ?</p>
+<hr>
+<h2 id="le-couplage-fléau-de-la-maintenabilité-et-de-la-testabilité">Le couplage, fléau de la maintenabilité et de la testabilité</h2>
+<p>Lorsque plusieurs modules sont fortement couplés, la maintenabilité ainsi que la testabilité deviennent plus difficiles.</p>
+<p>Prenons un exemple concret avec la récupération d&rsquo;élements depuis une base de données :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">MySQLConnection</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;./mysql.repository&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BookService</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">connection</span>: <span style="color:#66d9ef">MySQLConnection</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">connection</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MySQLConnection</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">getById</span>(<span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">connection</span>.<span style="color:#a6e22e">getBook</span>(<span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Dans cet exemple la classe <strong>BookService</strong> est fortement liée à <strong>MySQLConnection</strong>.</p>
+<p>Voici les effets de ce couplage :</p>
+<ul>
+<li>un test unitaire sur la méthode <strong>getById</strong> appellera directement la base de données. On souhaite l&rsquo;éviter pour des raisons de performance et de déterminisme des tests.</li>
+<li>si on souhaite changer de système de base de données, alors la classe <strong>BookService</strong> devra être modifiée.</li>
+</ul>
+<p>Le sens du couplage entre ces deux classes peut être représenté de cette manière :</p>
+<pre tabindex="0"><code>BookService -&gt; MySQLConnection
+</code></pre><hr>
+<h2 id="linversion-de-dépendance">L&rsquo;inversion de dépendance</h2>
+<p>Comme son nom l&rsquo;indique, <strong>l&rsquo;inversion des dépendances permet d&rsquo;inverser le sens du couplage entre un module de haut niveau (notre service) et un détail d&rsquo;implémentation (notre connexion MySQL)</strong>.</p>
+<p>Le but étant que la classe <strong>BookService</strong> ne dépende plus de l&rsquo;implémentation de la connexion MySQL.</p>
+<p>Voici comment mettre en place ce principe :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Repository</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">getBook</span>(<span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">BookFromRepository</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BookService</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">repository</span>: <span style="color:#66d9ef">Repository</span>) {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">getById</span>(<span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">repository</span>.<span style="color:#a6e22e">getBook</span>(<span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>On injecte un type <strong>Repository</strong> directement dans le constructeur de la classe <strong>BookService</strong>. Ainsi, la classe n&rsquo;a pas connaissance de l&rsquo;implémentation qui lui sera injectée. Elle sait simplement que cette implémentation respectera l&rsquo;interface <strong>Repository</strong>.</p>
+<p>La classe <strong>MySQLConnection</strong> doit maintenant implémentée l&rsquo;interface <strong>Repository</strong> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MySQLConnection</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">Repository</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">getBook</span>(<span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// implémentation concrète
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Il n&rsquo;y a plus qu&rsquo;à composer avec ces deux classes au lancement de l&rsquo;application :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> () <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">repository</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MySQLConnection</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bookService</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">BookService</span>(<span style="color:#a6e22e">repository</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
+</span></span></code></pre></div><p>Voici le nouveau sens du couplage :</p>
+<pre tabindex="0"><code>BookService -&gt; Repository | &lt;- MySQLConnection
+</code></pre><p><strong>BookService dépend dorénavant d&rsquo;une interface et non d&rsquo;une implémentation.</strong></p>
+<p>De plus il est maintenant possible de tester la classe <strong>BookService</strong> en passant par une implémentation <strong>fake</strong> qui n&rsquo;est pas connectée à une base de données.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39;getById&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">repository</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FakeRepository</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bookService</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">BookService</span>(<span style="color:#a6e22e">repository</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// suite du test
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>});
+</span></span></code></pre></div></section>
+
+  
+  
+
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end p-6 pl-3 no-underline"
+      href="https://fabienducret.github.io/posts/pattern-decorator/"
+      ><span>Le pattern Decorator pour gérer la complexité accidentelle</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60">
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="https://fabienducret.github.io">Clean blog</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank">Powered by Hugo️️</a
+  >️
+  <a class="link" href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
+
+  </body>
+</html>

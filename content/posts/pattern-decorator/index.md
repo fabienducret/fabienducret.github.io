@@ -66,6 +66,8 @@ Le problème de cette solution est qu'elle ajoute une complexité technique à n
 
 ---
 
+## Le pattern Decorator
+
 Le pattern **Decorator** peut nous aider pour décorreler cette complexité accidentelle de notre structure.
 
 Voici une réponse possible à ce problème.

@@ -121,7 +121,7 @@ Voici un exemple avec la gestion de la concurrence en Go .
 Ici on définit une structure Book avec deux méthodes, une pour lire la propriété name et la deuxième pour l&rsquo;écrire :
 type Book struct { name string } func (b *Book) Name() string { return b.name } func (b *Book) ChangeName(n string) { b."><meta itemprop="datePublished" content="2023-01-21T17:49:53+01:00" />
 <meta itemprop="dateModified" content="2023-01-21T17:49:53+01:00" />
-<meta itemprop="wordCount" content="380">
+<meta itemprop="wordCount" content="383">
 <meta itemprop="keywords" content="" />
   
   <meta name="twitter:card" content="summary"/>
@@ -278,6 +278,7 @@ FAIL
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Le problème de cette solution est qu&rsquo;elle ajoute une complexité technique à notre structure. Ce n&rsquo;est clairement pas idéal car on couple fortement notre structure avec cette notion de concurrence.</p>
 <hr>
+<h2 id="le-pattern-decorator">Le pattern Decorator</h2>
 <p>Le pattern <strong>Decorator</strong> peut nous aider pour décorreler cette complexité accidentelle de notre structure.</p>
 <p>Voici une réponse possible à ce problème.</p>
 <p>On passe par une interface <strong>Book</strong> qui sera implémentée par deux structures :</p>
@@ -331,6 +332,10 @@ FAIL
   
   
   <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a class="flex w-1/2 items-center p-6 pr-3 no-underline" href="https://fabienducret.github.io/posts/dependency-inversion/"
+      ><span class="mr-1.5">←</span><span>L&#39;inversion de dépendance</span></a
+    >
     
     
     <a
