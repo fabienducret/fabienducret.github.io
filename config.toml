@@ -5,6 +5,7 @@ subtitle = 'subtitle'
 theme = 'paper'
 publishDir = 'docs'
 defaultContentLanguage = 'fr'
+googleAnalytics = "G-S8LT08P48S"
 
 #disqusSortname = "clean-blog-4"
 
